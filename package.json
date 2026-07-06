@@ -1,0 +1,14 @@
+{
+  "name": "branders-ai",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "AI-powered Startup Launch Kit Generator",
+  "scripts": {
+    "validate": "node --env-file=.env.local scripts/validate-pipeline.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.110.0",
+    "@fal-ai/client": "^1.10.1"
+  }
+}

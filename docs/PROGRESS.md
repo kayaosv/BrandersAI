@@ -4,7 +4,7 @@ Estado y pendientes por sesión. Actualizar al cierre de cada sesión (es el con
 arranque de la siguiente).
 
 ## Estado actual
-**Fase:** preparación (pre-Sesión 0).
+**Fase:** andamiaje listo. Sesión 0 ejecutable en cuanto haya claves fal.ai + Anthropic.
 
 ### Hecho
 - Tooling de Claude Code configurado:
@@ -13,16 +13,26 @@ arranque de la siguiente).
   - Skills (`.claude/skills/`): fal-ai-pipeline, stripe-one-time, sharp-image-processing
     (+ global nextjs-supabase).
   - CLAUDE.md creado (Basic $19).
-  - Specs copiados a `docs/spec.md` y `docs/plan.md`.
+  - Specs copiados a `docs/spec.md` y `docs/plan.md` (spec corregido a $19).
+- Repo git inicializado y pusheado a github.com/kayaosv/BrandersAI.
+- `.env.example` documentado; `.env.local` con claves Stripe test (NO en repo).
+- Plugin oficial de Stripe instalado (skills + MCP para Sesión 4).
+- **Andamiaje Sprint 0 listo** (Sesión 0):
+  - `package.json` con SDKs (@anthropic-ai/sdk, @fal-ai/client) instalados.
+  - `scripts/pipeline.js` (brief + Ideogram + Recraft + retry/backoff + coste).
+  - `scripts/test-cases.js` (10 empresas ficticias, 5 marcadas para SVG).
+  - `scripts/validate-pipeline.js` — corre con `npm run validate`.
+  - `docs/sprint0-results.md` — plantilla del veredicto §7.3.
 
-### Pendiente para arrancar la Sesión 0 (ver plan §8)
-- [ ] Cuenta fal.ai + $10 de créditos
-- [ ] API key de Anthropic (Claude API)
-- [ ] Cuenta Stripe (modo test)
-- [ ] Proyecto Supabase creado
+### Pendiente para arrancar la Sesión 0
+- [ ] Cuenta fal.ai + $10 de créditos → `FAL_KEY` en `.env.local`
+- [ ] API key de Anthropic → `ANTHROPIC_API_KEY` en `.env.local`
+- [ ] Luego: `npm run validate` y evaluar `sprint0-output/`
+
+### Pendiente más adelante
+- [ ] Proyecto Supabase + MCP (aplazado a próxima sesión)
 - [ ] Verificar/comprar dominio branders.ai
-- [ ] `git init` + primer commit (el repo aún no está inicializado)
-- [ ] Configurar MCPs de prioridad alta: Supabase, Stripe
+- [ ] Confirmar slugs reales de fal.ai (Ideogram/Recraft) durante la corrida Sprint 0
 
 ### Decisiones tomadas
 - Basic = **$19** (no $29; spec desactualizado). Complete = $49.
